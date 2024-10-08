@@ -1,19 +1,30 @@
 #include "raylib.h"
-#include <cmath>
+#include "Spaceship.h"
 
-constexpr auto SCREEN_WIDTH  = 1600;
-constexpr auto SCREEN_HEIGHT = 900;
 
-int main()
-{
-    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Visualizing Vector2");
+
+int main(){
+    // Initialize Raylib window
+    const int screenWidth = 1600;
+    const int screenHeight = 800;
+    InitWindow(screenWidth, screenHeight, "Spaceship!");
+
+    // Create a spaceship
+    Spaceship spaceship = Spaceship({screenWidth / 2.0f, screenHeight / 2.0}, 200.0f);
+
     SetTargetFPS(60);
 
-    while (!WindowShouldClose())
-    {
-        
+    // Main game loop
+    while (!WindowShouldClose()){
+        spaceship.Update();
+
+        BeginDrawing();
+        ClearBackground(BLACK);
+        spaceship.Draw();
+        EndDrawing();
     }
 
+    // Close window and clean up
     CloseWindow();
     return 0;
 }
