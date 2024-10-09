@@ -1,8 +1,6 @@
 #include "raylib.h"
 #include "Spaceship.h"
 
-
-
 int main(){
     // Initialize Raylib window
     const int screenWidth = 1600;
@@ -10,7 +8,7 @@ int main(){
     InitWindow(screenWidth, screenHeight, "Spaceship!");
 
     // Create a spaceship
-    Spaceship spaceship = Spaceship({screenWidth / 2.0f, screenHeight / 2.0}, 200.0f);
+    Spaceship spaceship({800, 400}, 50.0f);
 
     SetTargetFPS(60);
 
@@ -19,7 +17,7 @@ int main(){
         spaceship.Update();
 
         BeginDrawing();
-        ClearBackground(BLACK);
+        ClearBackground(ORANGE);
         spaceship.Draw();
         EndDrawing();
     }
