@@ -17,7 +17,12 @@ add_subdirectory(libs/raylib)
 include_directories(include)
 
 # Add the source files to the project
-add_executable(${PROJECT_NAME} src/main.cpp src/Spaceship.cpp)
+add_executable(${PROJECT_NAME} 
+src/main.cpp 
+src/Spaceship.cpp 
+src/SpaceshipScene.cpp
+src/MenuScene.cpp
+src/SceneManager.cpp)
 
 # Link raylib to the project
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)

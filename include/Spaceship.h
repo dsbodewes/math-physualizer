@@ -1,5 +1,4 @@
 // Spaceship.h
-
 #ifndef SPACESHIP_H
 #define SPACESHIP_H
 
@@ -18,12 +17,10 @@ public:
     // Update the spaceship's position and rotation
     void Update();
 
-
-    // Draw the spaceship on the screen
     void Draw();
 
 private:
-    void HandleInput(); // Handle user input for moving the spaceship
+    void HandleInput(); 
 };
 
 #endif // SPACESHIP_H

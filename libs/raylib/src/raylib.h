@@ -172,6 +172,7 @@
 #define YELLOW     CLITERAL(Color){ 253, 249, 0, 255 }     // Yellow
 #define GOLD       CLITERAL(Color){ 255, 203, 0, 255 }     // Gold
 #define ORANGE     CLITERAL(Color){ 255, 161, 0, 255 }     // Orange
+#define ORANGE2     CLITERAL(Color){ 255, 132, 61, 255 }     // Orange but darker
 #define PINK       CLITERAL(Color){ 255, 109, 194, 255 }   // Pink
 #define RED        CLITERAL(Color){ 230, 41, 55, 255 }     // Red
 #define MAROON     CLITERAL(Color){ 190, 33, 55, 255 }     // Maroon

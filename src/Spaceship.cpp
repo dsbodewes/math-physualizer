@@ -8,16 +8,14 @@ Spaceship::Spaceship(Vector2 initPosition, float initSpeed) {
     position = initPosition;
     speed = initSpeed;
     angle = 0.0f; // Starts facing upwards
-    velocity = { 0.0f, 0.0f }; // Starts with no velocity
+    velocity = { 0.0f, 0.0f }; 
 }
 
 void Spaceship::HandleInput() {
-    // Rotate left
     if(IsKeyDown(KEY_A)){
         angle -= 3.0f;
     }
 
-    // Rotate right
     if(IsKeyDown(KEY_D)){
         angle += 3.0f;
     }
@@ -33,8 +31,8 @@ void Spaceship::HandleInput() {
     }
 
     // Velocity damping to prevent infinite acceleration
-    velocity.x *= 0.99f;
-    velocity.y *= 0.99f;
+    velocity.x *= 0.95f;
+    velocity.y *= 0.95f;
 }
 
 void Spaceship::Update() {
