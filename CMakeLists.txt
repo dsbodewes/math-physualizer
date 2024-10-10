@@ -22,7 +22,9 @@ src/main.cpp
 src/Spaceship.cpp 
 src/SpaceshipScene.cpp
 src/MenuScene.cpp
-src/SceneManager.cpp)
+src/SceneManager.cpp
+src/Pendulum.cpp
+src/PendulumScene.cpp)
 
 # Link raylib to the project
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)

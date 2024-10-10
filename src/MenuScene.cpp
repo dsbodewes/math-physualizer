@@ -11,5 +11,6 @@ void MenuScene::Update() {
 
 void MenuScene::Draw() {
     DrawText("Press 1 to start Spaceship", 100, 100, 50, YELLOW);
-    DrawText("Press BACKSPACE to return to menu", 100, 175, 50, YELLOW);
+    DrawText("Press 2 to start Pendulum", 100, 180, 50, YELLOW);
+    DrawText("Press BACKSPACE to return to menu", 100, 260, 50, YELLOW);
 }
