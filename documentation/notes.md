@@ -41,12 +41,3 @@ Vector2 v3 = { position.x + 20 * cosf((angle - 120) * DEG2RAD), position.y + 20 
     v2-------v3
 
 
-  (v1)
-     |
-     |
-     |     (position)
-     +--------------------- (v2)
-    /
-   /
-(v3)
-
