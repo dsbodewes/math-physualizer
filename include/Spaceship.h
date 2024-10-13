@@ -16,7 +16,6 @@ public:
 
     // Update the spaceship's position and rotation
     void Update();
-
     void Draw();
 
 private:

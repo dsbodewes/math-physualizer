@@ -6,14 +6,14 @@
 #include "Pendulum.h" 
 
 class PendulumScene : public Scene {
-private:
-    Pendulum pendulum;
-
 public:
     PendulumScene();
     ~PendulumScene();
     void Update() override;
     void Draw() override;
+
+private:
+    Pendulum pendulum;
 };
 
 #endif // PENDULUMSCENE_H

@@ -12,11 +12,11 @@ Spaceship::Spaceship(Vector2 initPosition, float initSpeed) {
 }
 
 void Spaceship::HandleInput() {
-    if(IsKeyDown(KEY_A)){
+    if(IsKeyDown(KEY_A)) {
         angle -= 3.0f;
     }
 
-    if(IsKeyDown(KEY_D)){
+    if(IsKeyDown(KEY_D)) {
         angle += 3.0f;
     }
 
@@ -38,6 +38,7 @@ void Spaceship::HandleInput() {
 void Spaceship::Update() {
     HandleInput();
 
+    // Update position
     position.x += velocity.x;
     position.y += velocity.y;
 

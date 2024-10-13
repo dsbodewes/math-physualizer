@@ -6,14 +6,14 @@
 #include "Spaceship.h" 
 
 class SpaceshipScene : public Scene {
-private:
-    Spaceship spaceship;
-
 public:
     SpaceshipScene();
     ~SpaceshipScene();
     void Update() override;
     void Draw() override;
+
+private:
+    Spaceship spaceship;
 };
 
 #endif // SPACESHIPSCENE_H
