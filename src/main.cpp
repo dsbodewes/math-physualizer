@@ -23,7 +23,7 @@ int main() {
         sceneManager.Update();
 
         BeginDrawing();
-        ClearBackground(SKYBLUE);
+        ClearBackground(NAVYBLUE);
         sceneManager.Draw();
         EndDrawing();
 

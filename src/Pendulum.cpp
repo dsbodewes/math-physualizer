@@ -15,7 +15,10 @@ Pendulum::Pendulum(Vector2 initOrigin, float initLength) {
     // Calculate initial position of the pendulum bob
     position = { origin.x + length * sinf(angle), origin.y + length * cosf(angle) };
 }
-    
+
+void Pendulum::ApplyForce(float force) {
+    angularVelocity += force; // Adjust angular velocity based on the force applied
+}    
 
 void Pendulum::Update(){
     angularAcceleration = (-gravity / length) * sinf(angle); // Calculate acceleration (using formula)
@@ -30,8 +33,8 @@ void Pendulum::Update(){
 }
 
 void Pendulum::Draw(){
-    DrawLineV(origin, position, BEIGE); // Draw line from origin to pendulum bob
-    DrawCircleV(position, 50, RED); // Draw pendulum bob
+    DrawLineEx(origin, position, 15.0f, BEIGE); // Draw line from origin to pendulum bob
+    DrawCircleV(position, 50, MAROON); // Draw pendulum bob
 }
 
 

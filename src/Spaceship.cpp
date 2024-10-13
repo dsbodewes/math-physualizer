@@ -76,5 +76,5 @@ void Spaceship::Draw() {
     Vector2 rotatedV3 = rotatePoint(v3, angle, position);
 
     // Draw the spaceship as a triangle with the rotated vertices
-    DrawTriangle(rotatedV1, rotatedV2, rotatedV3, BLUE);
+    DrawTriangle(rotatedV1, rotatedV2, rotatedV3, DARKBLUE);
 }

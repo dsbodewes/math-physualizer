@@ -10,6 +10,7 @@ class Pendulum {
 
         void Update();
         void Draw();  
+        void ApplyForce(float force);
 
     private:
     Vector2 origin; // Point from which the pendulum is suspended
