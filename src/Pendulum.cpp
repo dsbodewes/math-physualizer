@@ -20,7 +20,7 @@ void Pendulum::ApplyForce(float force) {
     angularVelocity += force; // Adjust angular velocity based on the force applied
 }    
 
-void Pendulum::Update(){
+void Pendulum::Update() {
     angularAcceleration = (-gravity / length) * sinf(angle); // Calculate acceleration (using formula)
     angularVelocity += angularAcceleration; // Update angular velocity
     angle += angularVelocity; // Update angle

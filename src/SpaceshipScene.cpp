@@ -13,6 +13,5 @@ void SpaceshipScene::Draw() {
     ClearBackground(NAVYBLUE);
     spaceship.Draw();
     DrawText("A and D to rotate", 50, 50, 25, RAYWHITE);  
-    DrawText("W to thrust", 50, 75, 25, RAYWHITE);  
-        
+    DrawText("W to thrust", 50, 75, 25, RAYWHITE);        
 }

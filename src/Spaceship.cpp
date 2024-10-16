@@ -64,7 +64,7 @@ void Spaceship::Draw() {
         float angleRad = angleDeg * DEG2RAD;
         float cosA = cosf(angleRad);
         float sinA = sinf(angleRad);
-        return Vector2{
+        return Vector2 {
             origin.x + point.x * cosA - point.y * sinA,
             origin.y + point.x * sinA + point.y * cosA
         };
@@ -78,5 +78,4 @@ void Spaceship::Draw() {
     // Draw the spaceship as a triangle with the rotated vertices
     DrawTriangle(rotatedV1, rotatedV2, rotatedV3, BLACK);
     DrawTriangleLines(rotatedV1, rotatedV2, rotatedV3, WHITE);
-
 }

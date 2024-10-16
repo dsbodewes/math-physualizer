@@ -1,9 +1,7 @@
 // PendulumScene.cpp
 #include "PendulumScene.h"
 
-PendulumScene::PendulumScene() 
-    : pendulum({800, 200}, 400.0f)  // Create the pendulum with origin at (800, 200) and length 400
-{}
+PendulumScene::PendulumScene() : pendulum({800, 200}, 400.0f) {}  
 
 PendulumScene::~PendulumScene() {}
 
@@ -18,5 +16,4 @@ void PendulumScene::Draw() {
     ClearBackground(NAVYBLUE);
     pendulum.Draw();
     DrawText("LEFT-CLICK to add force", 50, 50, 25, RAYWHITE);  
-    
 }
