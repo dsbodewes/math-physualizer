@@ -36,7 +36,7 @@ void Pendulum::Draw() {
     DrawLineEx(origin, position, 15.0f, WHITE); // Draw line from origin to pendulum bob
     DrawLineEx(origin, position, 13.0f, BLACK); // Draw line from origin to pendulum bob
     DrawCircleV(position, 50, WHITE); // Draw pendulum bob outline
-    DrawCircleV(position, 48, CYAN); // Draw pendulum bob
+    DrawCircleV(position, 48, RED); // Draw pendulum bob
 }
 
 

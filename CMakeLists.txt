@@ -25,8 +25,7 @@ src/MenuScene.cpp
 src/SceneManager.cpp
 src/Pendulum.cpp
 src/PendulumScene.cpp
-src/AimingSystem.cpp
-src/AimingSystemScene.cpp)
+)
 
 # Link raylib to the project
 target_link_libraries(${PROJECT_NAME} PRIVATE raylib)

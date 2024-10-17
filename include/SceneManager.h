@@ -5,15 +5,15 @@
 #include "Scene.h"
 
 class SceneManager {
-private:
-    Scene* currentScene;
-
 public:
     SceneManager();
     ~SceneManager();
     void ChangeScene(Scene* newScene);
     void Update();
     void Draw();
+
+private:
+    Scene* currentScene;
 };
 
 #endif // SCENEMANAGER_H

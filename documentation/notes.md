@@ -1,4 +1,4 @@
-*What im using*
+*What I'm using*
 ProjectName/
 │
 ├── src/                 # Source files
@@ -39,5 +39,19 @@ Vector2 v3 = { position.x + 20 * cosf((angle - 120) * DEG2RAD), position.y + 20 
        /   \
       /     \
     v2-------v3
+
+
+*Projectile Motion Simulator*
+Concepts: Vectors, trigonometry, gravity, physics
+
+Create a 2D simulation where the player can launch a projectile at a given angle and velocity.
+Calculate the projectile’s trajectory using physics equations that incorporate gravity.
+You can display the projectile’s path and allow the player to adjust launch parameters (angle, speed).
+Features:
+
+Adjust launch angle and speed using keys.
+Display trajectory path with dots or lines.
+Show real-time motion with gravity pulling the projectile down.
+Math Focus: The key formula is x = v * cos(θ) * t and y = v * sin(θ) * t - 0.5 * g * t^2, where v is initial velocity, θ is the angle, g is gravity, and t is time.
 
 

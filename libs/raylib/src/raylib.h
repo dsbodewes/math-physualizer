@@ -198,6 +198,8 @@
 #define ORANGE2     CLITERAL(Color){ 255, 132, 61, 255 }     // Orange but darker
 #define NAVYBLUE    CLITERAL(Color){ 0, 30, 63, 255 }        // Navy Blue
 #define CYAN        CLITERAL(Color){ 0, 158, 150, 255 }      // Cyan
+#define TEAL        CLITERAL(Color){ 0, 87, 75, 255 }        // Teal
+#define BRIGHTCYAN  CLITERAL(Color){ 0, 200, 200, 200 }      // Bright Cyan
 
 //----------------------------------------------------------------------------------
 // Structures Definition
