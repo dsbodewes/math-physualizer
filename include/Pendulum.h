@@ -11,6 +11,8 @@ class Pendulum {
         void Update();
         void Draw();  
         void ApplyForce(float force);
+        float* GetPointerXPossition(){return &position.x;};
+        float* GetPointerYPossition(){return &position.y;};
 
     private:
     Vector2 origin; // Point from which the pendulum is suspended

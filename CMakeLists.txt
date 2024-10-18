@@ -25,6 +25,8 @@ src/MenuScene.cpp
 src/SceneManager.cpp
 src/Pendulum.cpp
 src/PendulumScene.cpp
+src/Boid.cpp
+src/BoidScene.cpp
 )
 
 # Link raylib to the project

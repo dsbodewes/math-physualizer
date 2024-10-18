@@ -4,6 +4,7 @@
 #include "MenuScene.h"
 #include "SpaceshipScene.h"
 #include "PendulumScene.h"
+#include "BoidScene.h"
 
 int main() {
     // Initialize Raylib window
@@ -34,9 +35,9 @@ int main() {
         if (IsKeyPressed(KEY_TWO)) {
             sceneManager.ChangeScene(new PendulumScene());
         }
-        /*if (IsKeyPressed(KEY_THREE)) {
-            sceneManager.ChangeScene(new ???());
-        }*/
+        if (IsKeyPressed(KEY_THREE)) {
+            sceneManager.ChangeScene(new BoidScene());
+        }
         if (IsKeyPressed(KEY_BACKSPACE)) {
             sceneManager.ChangeScene(new MenuScene());
         }
