@@ -4,6 +4,7 @@
 
 #include "Scene.h"
 #include "Boid.h"
+#include <vector>
 
 class BoidScene : public Scene {
 public:
