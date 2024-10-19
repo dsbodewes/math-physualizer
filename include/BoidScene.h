@@ -14,7 +14,7 @@ public:
     void Draw() override;
 
 private:
-    Boid boid;
+    std::vector<Boid> boids;
 };
 
 #endif // BOIDSCENE_H
