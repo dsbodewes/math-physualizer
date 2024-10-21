@@ -7,16 +7,23 @@
 #include "BoidScene.h"
 
 int main() {
-    // Initialize Raylib window
     const int screenWidth = 1600;
     const int screenHeight = 800;
     InitWindow(screenWidth, screenHeight, "Math-Visualization");
 
     SetTargetFPS(60);
 
-    // Create the scene manager and load the MenuScene
+    // Create the scene manager and scenes
     SceneManager sceneManager;
-    sceneManager.ChangeScene(new MenuScene());
+
+    // Initialize all scenes once
+    SpaceshipScene spaceshipScene;
+    PendulumScene pendulumScene;
+    BoidScene boidScene;
+    MenuScene menuScene;
+
+    // Set initial scene to menu
+    sceneManager.ChangeScene(&menuScene);
 
     // Main game loop
     while (!WindowShouldClose()) {
@@ -30,20 +37,21 @@ int main() {
 
         // Scene switching logic
         if (IsKeyPressed(KEY_ONE)) {
-            sceneManager.ChangeScene(new SpaceshipScene());
+            sceneManager.ChangeScene(&spaceshipScene);  // Switch to SpaceshipScene
         }
         if (IsKeyPressed(KEY_TWO)) {
-            sceneManager.ChangeScene(new PendulumScene());
+            sceneManager.ChangeScene(&pendulumScene);  // Switch to PendulumScene
         }
         if (IsKeyPressed(KEY_THREE)) {
-            sceneManager.ChangeScene(new BoidScene());
+            sceneManager.ChangeScene(&boidScene);  // Switch to BoidScene
         }
         if (IsKeyPressed(KEY_BACKSPACE)) {
-            sceneManager.ChangeScene(new MenuScene());
+            sceneManager.ChangeScene(&menuScene);  // Switch back to MenuScene
         }
     }
 
     // Close window and clean up
     CloseWindow();
+
     return 0;
 }

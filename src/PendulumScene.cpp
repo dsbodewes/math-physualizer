@@ -1,13 +1,13 @@
 // PendulumScene.cpp
 #include "PendulumScene.h"
 
-PendulumScene::PendulumScene() : pendulum({800, 200}, 500.0f) {}  
+PendulumScene::PendulumScene() : pendulum({800, -20}, 500.0f) {}  
 
 PendulumScene::~PendulumScene() {}
 
 void PendulumScene::Update() {
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
-        pendulum.ApplyForce(0.1f);
+        pendulum.ApplyForce(0.02f);
     }
     pendulum.Update();
 }

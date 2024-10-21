@@ -1,22 +1,24 @@
 // SceneManager.cpp
 #include "SceneManager.h"
-#include <iostream>
 
 SceneManager::SceneManager() : currentScene(nullptr) {}
 
-SceneManager::~SceneManager() {
-    delete currentScene;
-}
+SceneManager::~SceneManager() {}
 
 void SceneManager::ChangeScene(Scene* newScene) {
-    delete currentScene;
-    currentScene = newScene;
+    if (currentScene != newScene) {
+        currentScene = newScene; // Simply switch to the new scene without deleting
+    }
 }
 
 void SceneManager::Update() {
-    if (currentScene) currentScene->Update();
+    if (currentScene != nullptr) {
+        currentScene->Update();
+    }
 }
 
 void SceneManager::Draw() {
-    if (currentScene) currentScene->Draw();
+    if (currentScene != nullptr) {
+        currentScene->Draw();
+    }
 }
