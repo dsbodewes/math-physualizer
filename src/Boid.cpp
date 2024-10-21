@@ -8,6 +8,7 @@
 Boid::Boid(Vector2 initPosition, Vector2 initVelocity) {
     position = initPosition;
     velocity = initVelocity;
+    maxSpeed = 5.0f;
 }
 
 void Boid::Update(const std::vector<Boid>& boids) {
@@ -22,23 +23,25 @@ void Boid::Update(const std::vector<Boid>& boids) {
     position.x += velocity.x;
     position.y += velocity.y;
 
-    // Screen wrapping
-    if (position.x > GetScreenWidth()) {
-        position.x = 0;
-    } else if (position.x < 0) {
-        position.x = GetScreenWidth();
+    if (Vector2Length(velocity) > maxSpeed) {
+    velocity = Vector2Scale(Vector2Normalize(velocity), maxSpeed);
     }
+
+    // Screen wrapping
+    position.x = fmod(position.x + GetScreenWidth(), GetScreenWidth());
+    position.y = fmod(position.y + GetScreenHeight(), GetScreenHeight());
 }
 
 void Boid::Draw() const {
-    DrawCircleV(position, 5, DARKGRAY);
+    DrawCircleV(position, 12, RAYWHITE);
+    DrawCircleV(position, 8, YELLOW);
 }
 
 Vector2 Boid::Separation(const std::vector<Boid>& boids) {
     Vector2 steer = {0.0f, 0.0f};
     for (const Boid& other : boids) {
         float distance = Vector2Distance(position, other.GetPosition());
-        if (&other != this && distance < 1.0f) { // Avoid boids within 50 pixels
+        if (&other != this && distance < 12.0f) { // Move away from nearby boids
             steer.x += position.x - other.GetPosition().x;
             steer.y += position.y - other.GetPosition().y;
         }
@@ -51,7 +54,7 @@ Vector2 Boid::Alignment(const std::vector<Boid>& boids) {
     int count = 0;
     for (const Boid& other : boids) {
         float distance = Vector2Distance(position, other.GetPosition());
-        if (&other != this && distance < 10.0f) { // Move in the same direction as nearby boids
+        if (&other != this && distance < 60.0f) { // Move in the same direction as nearby boids
             avarageVelocity.x += other.GetVelocity().x;
             avarageVelocity.y += other.GetVelocity().y;
             count++;
@@ -70,7 +73,7 @@ Vector2 Boid::Cohesion(const std::vector<Boid>& boids) {
     int count = 0;
     for (const Boid& other : boids) {
         float distance = Vector2Distance(position, other.GetPosition());
-        if (&other != this && distance < 10.0f) {  // Move towards nearby boids
+        if (&other != this && distance < 12.0f) {  // Move towards nearby boids
             center.x += other.GetPosition().x;
             center.y += other.GetPosition().y;
             count++;

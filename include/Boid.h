@@ -18,6 +18,9 @@ private:
     Vector2 position;
     Vector2 velocity;
 
+    float maxSpeed;
+    float angle;
+
     Vector2 Separation(const std::vector<Boid>& boids);
     Vector2 Alignment(const std::vector<Boid>& boids);
     Vector2 Cohesion(const std::vector<Boid>& boids);

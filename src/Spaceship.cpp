@@ -43,10 +43,8 @@ void Spaceship::Update() {
     position.y += velocity.y;
 
     // Screen wrap
-    if (position.x > GetScreenWidth()) position.x = 0;
-    if (position.x < 0) position.x = GetScreenWidth();
-    if (position.y > GetScreenHeight()) position.y = 0;
-    if (position.y < 0) position.y = GetScreenHeight();
+    position.x = fmod(position.x + GetScreenWidth(), GetScreenWidth());
+    position.y = fmod(position.y + GetScreenHeight(), GetScreenHeight());
 }
 
 // Draw the spaceship on the screen

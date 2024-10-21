@@ -200,6 +200,8 @@
 #define CYAN        CLITERAL(Color){ 0, 158, 150, 255 }      // Cyan
 #define TEAL        CLITERAL(Color){ 0, 87, 75, 255 }        // Teal
 #define BRIGHTCYAN  CLITERAL(Color){ 0, 200, 200, 200 }      // Bright Cyan
+#define BABYBLUE    CLITERAL(Color){ 137, 207, 240, 255 }    // Baby Blue
+#define CRIMSON     CLITERAL(Color){ 220, 20, 60, 255 }      // Crimson
 
 //----------------------------------------------------------------------------------
 // Structures Definition
