@@ -50,22 +50,22 @@ Vector2 Boid::Separation(const std::vector<Boid>& boids) {
 }
 
 Vector2 Boid::Alignment(const std::vector<Boid>& boids) {
-    Vector2 avarageVelocity = { 0, 0 };
+    Vector2 averageVelocity = { 0, 0 };
     int count = 0;
     for (const Boid& other : boids) {
         float distance = Vector2Distance(position, other.GetPosition());
-        if (&other != this && distance < 60.0f) { // Move in the same direction as nearby boids
-            avarageVelocity.x += other.GetVelocity().x;
-            avarageVelocity.y += other.GetVelocity().y;
+        if (&other != this && distance < 55.0f) { // Move in the same direction as nearby boids
+            averageVelocity.x += other.GetVelocity().x;
+            averageVelocity.y += other.GetVelocity().y;
             count++;
         }
     }
     if (count > 0) {
-        avarageVelocity.x /= count;
-        avarageVelocity.y /= count;
-        avarageVelocity = Vector2Normalize(avarageVelocity);
+        averageVelocity.x /= count;
+        averageVelocity.y /= count;
+        averageVelocity = Vector2Normalize(averageVelocity);
     }
-    return avarageVelocity;
+    return averageVelocity;
 } 
 
 Vector2 Boid::Cohesion(const std::vector<Boid>& boids) {

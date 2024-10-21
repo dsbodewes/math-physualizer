@@ -1,7 +1,7 @@
 // PendulumScene.cpp
 #include "PendulumScene.h"
 
-PendulumScene::PendulumScene() : pendulum({800, 200}, 400.0f) {}  
+PendulumScene::PendulumScene() : pendulum({800, 200}, 500.0f) {}  
 
 PendulumScene::~PendulumScene() {}
 
