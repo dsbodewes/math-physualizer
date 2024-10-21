@@ -8,6 +8,7 @@
 class Boid {
 public:
     Boid(Vector2 initPosition, Vector2 initVelocity);
+    
     void Update(const std::vector<Boid>& boids); 
     void Draw() const;
 

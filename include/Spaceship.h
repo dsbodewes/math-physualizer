@@ -6,11 +6,6 @@
 
 class Spaceship {
 public:
-    Vector2 position;
-    Vector2 velocity;
-    float angle;
-    float speed;
-
     // Constructor
     Spaceship(Vector2 initPosition, float initSpeed);
 
@@ -19,6 +14,12 @@ public:
     void Draw();
 
 private:
+    Vector2 position;
+    Vector2 velocity;
+    
+    float angle;
+    float speed;
+
     void HandleInput(); 
 };
 
