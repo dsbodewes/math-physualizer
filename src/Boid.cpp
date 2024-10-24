@@ -41,7 +41,7 @@ Vector2 Boid::Separation(const std::vector<Boid>& boids) {
     Vector2 steer = {0.0f, 0.0f};
     for (const Boid& other : boids) {
         float distance = Vector2Distance(position, other.GetPosition());
-        if (&other != this && distance < 12.0f) { // Move away from nearby boids
+        if (&other != this && distance < 17.5f) { // Move away from nearby boids
             steer.x += position.x - other.GetPosition().x;
             steer.y += position.y - other.GetPosition().y;
         }
@@ -73,7 +73,7 @@ Vector2 Boid::Cohesion(const std::vector<Boid>& boids) {
     int count = 0;
     for (const Boid& other : boids) {
         float distance = Vector2Distance(position, other.GetPosition());
-        if (&other != this && distance < 12.0f) {  // Move towards nearby boids
+        if (&other != this && distance < 12.5f) {  // Move towards nearby boids
             center.x += other.GetPosition().x;
             center.y += other.GetPosition().y;
             count++;

@@ -15,5 +15,6 @@ void PendulumScene::Update() {
 void PendulumScene::Draw() {
     ClearBackground(NAVYBLUE);
     pendulum.Draw();
-    DrawText("LEFT-CLICK to add force", 50, 50, 25, RAYWHITE);  
+    DrawText("LEFT-CLICK to add force", 50, 50, 25, RAYWHITE); 
+    DrawText("SHIFT for Double Pendulum", 50, 100, 25, RAYWHITE); 
 }
