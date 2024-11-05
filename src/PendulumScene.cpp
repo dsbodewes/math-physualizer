@@ -9,6 +9,9 @@ void PendulumScene::Update() {
     if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
         pendulum.ApplyForce(0.02f);
     }
+    if (IsMouseButtonPressed(MOUSE_RIGHT_BUTTON)) {
+        pendulum.ApplyForce(-0.01f);
+    }
     pendulum.Update();
 }
 
