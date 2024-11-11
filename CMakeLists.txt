@@ -25,6 +25,8 @@ src/MenuScene.cpp
 src/SceneManager.cpp
 src/Pendulum.cpp
 src/PendulumScene.cpp
+src/DoublePendulum.cpp
+src/DoublePendulumScene.cpp
 src/Boid.cpp
 src/BoidScene.cpp
 )

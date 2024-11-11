@@ -4,6 +4,7 @@
 #include "MenuScene.h"
 #include "SpaceshipScene.h"
 #include "PendulumScene.h"
+#include "DoublePendulumScene.h"
 #include "BoidScene.h"
 
 int main() {
@@ -19,6 +20,7 @@ int main() {
     // Initialize all scenes once
     SpaceshipScene spaceshipScene;
     PendulumScene pendulumScene;
+    DoublePendulumScene doublePendulumScene;
     BoidScene boidScene;
     MenuScene menuScene;
 
@@ -43,6 +45,9 @@ int main() {
             sceneManager.ChangeScene(&pendulumScene);  // Switch to PendulumScene
         }
         if (IsKeyPressed(KEY_THREE)) {
+            sceneManager.ChangeScene(&doublePendulumScene);  // Switch to DoublePendulumScene
+        }
+        if (IsKeyPressed(KEY_FOUR)) {
             sceneManager.ChangeScene(&boidScene);  // Switch to BoidScene
         }
         if (IsKeyPressed(KEY_BACKSPACE)) {
