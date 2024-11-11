@@ -8,7 +8,7 @@
 Boid::Boid(Vector2 initPosition, Vector2 initVelocity) {
     position = initPosition;
     velocity = initVelocity;
-    maxSpeed = 5.0f;
+    maxSpeed = 2.0f;
 }
 
 void Boid::Update(const std::vector<Boid>& boids) {

@@ -39,8 +39,3 @@ void Pendulum::Draw() {
     DrawCircleV(position, 50, WHITE); // Draw pendulum bob outline
     DrawCircleV(position, 48, CRIMSON); // Draw pendulum bob
 }
-
-
-
-
-
