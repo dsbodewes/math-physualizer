@@ -6,10 +6,11 @@
 
 class DoublePendulum {
 public:
-    DoublePendulum(/*Vector2 initOrigin, float length1, float length2*/);
+    DoublePendulum(Vector2 initOrigin, float length1, float length2, float mass1, float mass2);
 
     void Update();
     void Draw();
+    void ApplyForce(float force1, float force2);
     
 private:
     Vector2 origin;
@@ -25,6 +26,8 @@ private:
     float angularAcceleration1; // Angular acceleration of the first pendulum
     float angularAcceleration2; // Angular acceleration of the second pendulum
     float gravity;
+    float mass1;
+    float mass2;
 };
 
 #endif // DOUBLE_PENDULUM_H
