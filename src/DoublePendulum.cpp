@@ -58,10 +58,9 @@ void DoublePendulum::Draw() {
     DrawLineEx(position1, position2, 15.0f, WHITE);
     DrawLineEx(position1, position2, 13.0f, BLACK);
 
-
     DrawCircleV(position1, 50, WHITE);
     DrawCircleV(position1, 48, DARKBLUE);
 
     DrawCircleV(position2, 50, WHITE);
-    DrawCircleV(position2, 48, CRIMSON);
+    DrawCircleV(position2, 48, BRIGHTCYAN);
 }

@@ -1,7 +1,7 @@
 // DoublePendentulumScene.cpp
 #include "DoublePendulumScene.h"
 
-DoublePendulumScene::DoublePendulumScene() : doublePendulum({800, -20}, 380.0f, 290.0f, 20.0f, 4.5f) {}  
+DoublePendulumScene::DoublePendulumScene() : doublePendulum({800, -20}, 400.0f, 350.0f, 12.0f, 4.0f) {}  
 
 DoublePendulumScene::~DoublePendulumScene() {}
 
