@@ -53,5 +53,3 @@ Adjust launch angle and speed using keys.
 Display trajectory path with dots or lines.
 Show real-time motion with gravity pulling the projectile down.
 Math Focus: The key formula is x = v * cos(θ) * t and y = v * sin(θ) * t - 0.5 * g * t^2, where v is initial velocity, θ is the angle, g is gravity, and t is time.
-
-

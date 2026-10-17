@@ -87,4 +87,3 @@ Vector2 Boid::Cohesion(const std::vector<Boid>& boids) {
     }
     return center;
 }
-
